@@ -2,10 +2,65 @@
 
 Este API fue desarrollado para un Sistema de Reservas de Hotel, utilizando Django y Django REST Framework. La API cuenta con endpoints para gestionar reservas, habitaciones, clientes, tipos de habitación y métodos de pago.
 
+# API del Sistema de Reservas de Hotel
+Este API fue desarrollado para un Sistema de Reservas de habitaciones de un hotel, utilizando Django, Django REST Framework y SQLite. La API cuenta con endpoints para gestionar reservas, habitaciones, clientes, tipos de habitación y métodos de pago.
+
+### Ejecucion de proyecto Django Rest Framework
+
+1. Abrir una terminal y clonamos del repositorio
+```sh
+git clone https://github.com/abrahamfabiann/apiReservashotel.git
+```
+
+2. Ingresamos al directorio
+```sh
+cd apiReservashotel
+```
+3. construimos el docker
+```sh
+docker build -t api-reservas-hotel .
+```
+4. Iniciamos el docker
+```sh
+docker run -p 8000:8000 api-reservas-hotel
+```
+5. Ingresamos a la siguiente direccion y ya tenemos corriendo nuestro proyecto
+
+http://localhost:8000/
+
+donde tenemos lo siguiente: 
+
+- admin/		*Sitio de administracion de Django*
+- api/		*Contiene los endpoints del proyecto*
+- docs/		*Documentacion autogenerado de endpoints*
+
+### Correr Endpoints
+
+Para tener corriendo los endpoints requerimos ejecutar las migraciones dentro del contenedor,
+para esto realizamos lo siguiente:
+1. Abrir en una segunda terminal y ejecutar el siguiente comando para recuperar el identificador del contenedor
+```sh
+docker ps
+```
+2. Copiamos el CONTAINER ID y ejecutamos el comando
+```sh
+docker exec -it xxxxxxxx bash
+```
+3. Una vez dentro del contenedor ejecutamos
+```sh
+python manage.py migrate
+```
+
+Ahora nuevamente ingresamos a la direccion:
+
+http://localhost:8000/api
+
+
+BUEN TRABAJO! ya tenemos corriendo nuestra API
+
 ## Endpoints
 
 Los siguientes endpoints están disponibles en la API:
-
 
 ### Endpoints de Tipo de Habitación:
 - GET /api/room-types/

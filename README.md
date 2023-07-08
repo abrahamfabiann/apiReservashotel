@@ -7,20 +7,20 @@ Este API fue desarrollado para un Sistema de Reservas de habitaciones de un hote
 
 ### Ejecucion de proyecto Django Rest Framework
 
-1. Abrir una terminal y clonamos del repositorio
+1. Abrir una terminal y clonar el repositorio
 ```sh
 git clone https://github.com/abrahamfabiann/apiReservashotel.git
 ```
 
-2. Ingresamos al directorio
+2. Ingresar al directorio
 ```sh
 cd apiReservashotel
 ```
-3. construimos el docker
+3. Creamos la imagen
 ```sh
 docker build -t api-reservas-hotel .
 ```
-4. Iniciamos el docker
+4. Iniciamos un nuevo contenedor
 ```sh
 docker run -p 8000:8000 api-reservas-hotel
 ```
@@ -43,8 +43,13 @@ para esto realizamos lo siguiente:
 docker ps
 ```
 2. Copiamos el CONTAINER ID y ejecutamos el comando
+para usuarios linux
 ```sh
 docker exec -it xxxxxxxx bash
+```
+para usuarios windows
+```sh
+winpty docker exec -it xxxxxxxx bash
 ```
 3. Una vez dentro del contenedor ejecutamos
 ```sh

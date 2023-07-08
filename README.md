@@ -43,6 +43,7 @@ para esto realizamos lo siguiente:
 docker ps
 ```
 2. Copiamos el CONTAINER ID y ejecutamos el comando
+
 para usuarios linux
 ```sh
 docker exec -it xxxxxxxx bash

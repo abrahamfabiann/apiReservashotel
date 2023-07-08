@@ -4,11 +4,13 @@ from .serializer import PaymentMethodSerializer
 from .serializer import RoomTypeSerializer
 from .serializer import RoomSerializer
 from .serializer import ReservationSerializer
+
 from .models import Customer
 from .models import PaymentMethod
 from .models import RoomType
 from .models import Room
 from .models import Reservation
+
 
 class CustomerViewSet(viewsets.ModelViewSet):
     queryset = Customer.objects.all()

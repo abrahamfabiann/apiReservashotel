@@ -10,6 +10,7 @@ class CustomerSerializer(serializers.ModelSerializer):
         model = Customer
         #fields = ('identificationDocument','firstname','lastname','phone','email')
         fields = '__all__'
+        
 
 class PaymentMethodSerializer(serializers.ModelSerializer):
     class Meta:

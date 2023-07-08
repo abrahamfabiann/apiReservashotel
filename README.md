@@ -1,11 +1,7 @@
 # API del Sistema de Reservas de Hotel
-
-Este API fue desarrollado para un Sistema de Reservas de Hotel, utilizando Django y Django REST Framework. La API cuenta con endpoints para gestionar reservas, habitaciones, clientes, tipos de habitación y métodos de pago.
-
-# API del Sistema de Reservas de Hotel
 Este API fue desarrollado para un Sistema de Reservas de habitaciones de un hotel, utilizando Django, Django REST Framework y SQLite. La API cuenta con endpoints para gestionar reservas, habitaciones, clientes, tipos de habitación y métodos de pago.
 
-### Ejecucion de proyecto Django Rest Framework
+## Ejecucion de proyecto Django Rest Framework
 
 1. Abrir una terminal y clonar el repositorio
 ```sh
@@ -34,7 +30,7 @@ donde tenemos lo siguiente:
 - api/		*Contiene los endpoints del proyecto*
 - docs/		*Documentacion autogenerado de endpoints*
 
-### Correr Endpoints
+## Correr Endpoints
 
 Para tener corriendo los endpoints requerimos ejecutar las migraciones dentro del contenedor,
 para esto realizamos lo siguiente:
@@ -44,11 +40,11 @@ docker ps
 ```
 2. Copiamos el CONTAINER ID y ejecutamos el comando
 
-para usuarios linux
+*Para usuarios linux*
 ```sh
 docker exec -it xxxxxxxx bash
 ```
-para usuarios windows
+*Para usuarios windows*
 ```sh
 winpty docker exec -it xxxxxxxx bash
 ```
